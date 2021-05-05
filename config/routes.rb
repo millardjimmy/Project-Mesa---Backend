@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :transactions
-  resources :accounts
+  namespace :api do
+    namespace :v1do
+      resources :transactions
+      resources :accounts
+    end
+  end
+
 end
+
