@@ -7,11 +7,12 @@ class Api::V1::TransactionsController < ApplicationController
        render json: @transactions
     end
 
-    def create
-       
+    def show
+       @transaction = Transaction.find(params[:id])
+       render json: @transaction
     end
 
-    def show
+    def create
        
     end
 
