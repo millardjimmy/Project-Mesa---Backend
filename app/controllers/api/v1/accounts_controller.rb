@@ -14,6 +14,8 @@ class Api::V1::AccountsController < ApplicationController
     end
 
     def show
+        @account - Account.find(params[:id])
+        render json: @account
     end
 
     def destory
