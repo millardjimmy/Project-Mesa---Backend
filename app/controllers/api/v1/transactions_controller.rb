@@ -8,7 +8,7 @@ class Api::V1::TransactionsController < ApplicationController
     end
 
     def show
-       @transaction = Transaction.find(params[:id])
+       @transaction = @account.transactions.find_by(id: params[:id])
        render json: @transaction
     end
 
