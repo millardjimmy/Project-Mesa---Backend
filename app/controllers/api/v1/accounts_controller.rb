@@ -6,6 +6,7 @@ class Api::V1::AccountsController < ApplicationController
     end
 
     def create
+        
         @account = Account.new(account_params)
         if @account.save
             render json: @account
